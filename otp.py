@@ -5,17 +5,18 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Generate a random 6-digit OTP
-def generate_otp():
-    return ''.join(random.choice(string.digits) for _ in range(6))
+def generate_otp(LENGTH):
+    return ''.join(random.choice(string.digits) for _ in range(LENGTH))
 
 
 # Email configuration
 sender_email = "akiwelekar@gmail.com"
 sender_password = "pxue ssll qagm chhu"
 recipient_email = "awk@dbatu.ac.in"
+LENGTH = 6
 
 # Generate OTP
-otp = generate_otp()
+otp = generate_otp(LENGTH)
 
 # Create the email content
 subject = "Your OTP Code"
